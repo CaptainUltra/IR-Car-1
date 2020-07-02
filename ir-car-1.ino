@@ -6,9 +6,13 @@
 #define MOTOR_OUTPUT_2 5
 #define MOTOR_OUTPUT_3 6
 #define MOTOR_OUTPUT_4 7
+#define BLINKER_RIGHT 12
+#define BLINKER_LEFT 13
+#define HEADLIGHTS 11
 
 IRrecv irrecv(RECV_PIN);
-decode_results results; //Somewhere to store the IR signal results
+decode_results results;      //Somewhere to store the IR signal results
+bool headlightsFlag = false; //To store the state of the headlights. False = off.
 
 //Signal to motor driver for forward direction
 void forward()
@@ -54,6 +58,7 @@ void stop()
   digitalWrite(MOTOR_OUTPUT_3, LOW);
   digitalWrite(MOTOR_OUTPUT_4, LOW);
 }
+
 //Turn LED on and off
 void blinker(int pin)
 {
@@ -66,6 +71,16 @@ void blinker(int pin)
     delay(750);
     i++;
   }
+}
+
+//Turn on/off headlights
+void headlights()
+{
+  headlightsFlag = !headlightsFlag;
+  if (headlightsFlag)
+    digitalWrite(HEADLIGHTS, HIGH);
+  else
+    digitalWrite(HEADLIGHTS, LOW);
 }
 
 //Function to decode signal, print the result and take action
@@ -102,14 +117,15 @@ void decodeSignal()
     break;
   case 0xFD30CF:
     Serial.println("Headlights");
+    headlights();
     break;
   case 0xFD10EF:
     Serial.println("Left blinker");
-    blinker(13);
+    blinker(BLINKER_LEFT);
     break;
   case 0xFD50AF:
     Serial.println("Right blinker");
-    blinker(12);
+    blinker(BLINKER_RIGHT);
     break;
   }
 
@@ -124,8 +140,9 @@ void setup()
   pinMode(MOTOR_OUTPUT_2, OUTPUT);
   pinMode(MOTOR_OUTPUT_3, OUTPUT);
   pinMode(MOTOR_OUTPUT_4, OUTPUT);
-  pinMode(12, OUTPUT);
-  pinMode(13, OUTPUT);
+  pinMode(BLINKER_RIGHT, OUTPUT);
+  pinMode(BLINKER_LEFT, OUTPUT);
+  pinMode(HEADLIGHTS, OUTPUT);
 }
 
 void loop()
