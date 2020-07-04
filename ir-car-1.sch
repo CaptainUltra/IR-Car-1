@@ -1,0 +1,439 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:Arduino_UNO_R3 A1
+U 1 1 5EFDFC88
+P 2550 3850
+F 0 "A1" H 2750 2600 50  0000 C CNN
+F 1 "Arduino_UNO_R3" H 3000 2700 50  0000 C CNN
+F 2 "Module:Arduino_UNO_R3" H 2550 3850 50  0001 C CIN
+F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 2550 3850 50  0001 C CNN
+	1    2550 3850
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VCC #PWR02
+U 1 1 5EFE8A71
+P 2650 5100
+F 0 "#PWR02" H 2650 4950 50  0001 C CNN
+F 1 "VCC" H 2750 5250 50  0000 C CNN
+F 2 "" H 2650 5100 50  0001 C CNN
+F 3 "" H 2650 5100 50  0001 C CNN
+	1    2650 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 5100 2650 4850
+$Comp
+L power:GND #PWR01
+U 1 1 5EFEB7E2
+P 2650 2600
+F 0 "#PWR01" H 2650 2350 50  0001 C CNN
+F 1 "GND" H 2655 2427 50  0000 C CNN
+F 2 "" H 2650 2600 50  0001 C CNN
+F 3 "" H 2650 2600 50  0001 C CNN
+	1    2650 2600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2650 2750 2650 2600
+Text GLabel 3350 4050 2    50   Output ~ 0
+MotorSignal1
+Text GLabel 3350 3950 2    50   Output ~ 0
+MotorSignal2
+Text GLabel 3350 3850 2    50   Output ~ 0
+MotorSignal3
+Text GLabel 3350 3750 2    50   Output ~ 0
+MotorSignal4
+Wire Wire Line
+	3050 4050 3350 4050
+Wire Wire Line
+	3050 3950 3350 3950
+Wire Wire Line
+	3050 3850 3350 3850
+Wire Wire Line
+	3350 3750 3050 3750
+NoConn ~ 3050 4350
+NoConn ~ 3050 4450
+NoConn ~ 3050 3450
+NoConn ~ 3050 3550
+NoConn ~ 3050 3650
+NoConn ~ 2050 4450
+NoConn ~ 2050 4250
+NoConn ~ 2050 4050
+NoConn ~ 2050 3850
+NoConn ~ 2050 3750
+NoConn ~ 2050 3650
+NoConn ~ 2050 3550
+NoConn ~ 2050 3450
+NoConn ~ 2050 3350
+NoConn ~ 2050 3150
+NoConn ~ 2050 3050
+NoConn ~ 2450 2750
+$Comp
+L Device:R R2
+U 1 1 5EFF0805
+P 3200 3250
+F 0 "R2" V 3200 3300 50  0000 C CNN
+F 1 "R" V 3200 3200 50  0000 C CNN
+F 2 "" V 3130 3250 50  0001 C CNN
+F 3 "~" H 3200 3250 50  0001 C CNN
+	1    3200 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5EFF2BA0
+P 3200 3150
+F 0 "R1" V 3200 3200 50  0000 C CNN
+F 1 "R" V 3200 3100 50  0000 C CNN
+F 2 "" V 3130 3150 50  0001 C CNN
+F 3 "~" H 3200 3150 50  0001 C CNN
+	1    3200 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5EFF540C
+P 3350 2200
+F 0 "D1" H 3450 2150 50  0000 C CNN
+F 1 "LED" H 3500 2250 50  0000 C CNN
+F 2 "" H 3350 2200 50  0001 C CNN
+F 3 "~" H 3350 2200 50  0001 C CNN
+	1    3350 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5EFF67C5
+P 3050 2200
+F 0 "#PWR03" H 3050 1950 50  0001 C CNN
+F 1 "GND" V 3055 2072 50  0000 R CNN
+F 2 "" H 3050 2200 50  0001 C CNN
+F 3 "" H 3050 2200 50  0001 C CNN
+	1    3050 2200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5EFF821B
+P 3700 3300
+F 0 "R3" V 3700 3350 50  0000 C CNN
+F 1 "R" V 3700 3250 50  0000 C CNN
+F 2 "" V 3630 3300 50  0001 C CNN
+F 3 "~" H 3700 3300 50  0001 C CNN
+	1    3700 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5EFF8915
+P 3700 3400
+F 0 "R4" V 3700 3450 50  0000 C CNN
+F 1 "R" V 3700 3350 50  0000 C CNN
+F 2 "" V 3630 3400 50  0001 C CNN
+F 3 "~" H 3700 3400 50  0001 C CNN
+	1    3700 3400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3500 2350 3500 3150
+Wire Wire Line
+	3500 3150 3350 3150
+Wire Wire Line
+	3350 3250 3550 3250
+Wire Wire Line
+	3550 2200 3500 2200
+Wire Wire Line
+	3550 3250 3550 2200
+Wire Wire Line
+	3200 2350 3050 2350
+Wire Wire Line
+	3050 2350 3050 2200
+Wire Wire Line
+	3200 2200 3050 2200
+Connection ~ 3050 2200
+Wire Wire Line
+	3050 3350 3550 3350
+Wire Wire Line
+	3550 3350 3550 3300
+Wire Wire Line
+	3550 3350 3550 3400
+Connection ~ 3550 3350
+$Comp
+L Device:LED D2
+U 1 1 5EFF7E00
+P 3350 2350
+F 0 "D2" H 3450 2300 50  0000 C CNN
+F 1 "LED" H 3500 2400 50  0000 C CNN
+F 2 "" H 3350 2350 50  0001 C CNN
+F 3 "~" H 3350 2350 50  0001 C CNN
+	1    3350 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Interface_Optical:TSOP32S40F U1
+U 1 1 5F00738F
+P 4850 4100
+F 0 "U1" V 4792 4388 50  0000 L CNN
+F 1 "TSOP32S40F" V 4883 4388 50  0000 L CNN
+F 2 "OptoDevice:Vishay_MOLD-3Pin" H 4800 3725 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/82669/tsop32s40f.pdf" H 5500 4400 50  0001 C CNN
+	1    4850 4100
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5F00BEAD
+P 4650 4600
+F 0 "#PWR05" H 4650 4350 50  0001 C CNN
+F 1 "GND" H 4655 4427 50  0000 C CNN
+F 2 "" H 4650 4600 50  0001 C CNN
+F 3 "" H 4650 4600 50  0001 C CNN
+	1    4650 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 4250 3600 4250
+Wire Wire Line
+	3600 4250 3600 4850
+Wire Wire Line
+	3600 4850 4850 4850
+Wire Wire Line
+	4850 4850 4850 4500
+Wire Wire Line
+	2350 4850 2350 5200
+Wire Wire Line
+	2350 5200 5050 5200
+Wire Wire Line
+	5050 5200 5050 4500
+Wire Wire Line
+	4650 4600 4650 4500
+NoConn ~ 2450 4850
+NoConn ~ 3050 4150
+$Comp
+L Device:LED D3
+U 1 1 5F01ADC8
+P 4200 3200
+F 0 "D3" H 4300 3150 50  0000 C CNN
+F 1 "LED" H 4350 3250 50  0000 C CNN
+F 2 "" H 4200 3200 50  0001 C CNN
+F 3 "~" H 4200 3200 50  0001 C CNN
+	1    4200 3200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D4
+U 1 1 5F01C0A3
+P 4200 3400
+F 0 "D4" H 4300 3350 50  0000 C CNN
+F 1 "LED" H 4350 3450 50  0000 C CNN
+F 2 "" H 4200 3400 50  0001 C CNN
+F 3 "~" H 4200 3400 50  0001 C CNN
+	1    4200 3400
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5F01C2BA
+P 4550 3300
+F 0 "#PWR04" H 4550 3050 50  0001 C CNN
+F 1 "GND" V 4555 3172 50  0000 R CNN
+F 2 "" H 4550 3300 50  0001 C CNN
+F 3 "" H 4550 3300 50  0001 C CNN
+	1    4550 3300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4350 3400 4550 3400
+Wire Wire Line
+	4550 3400 4550 3300
+Wire Wire Line
+	4350 3200 4550 3200
+Wire Wire Line
+	4550 3200 4550 3300
+Connection ~ 4550 3300
+Wire Wire Line
+	4050 3200 3950 3200
+Wire Wire Line
+	3950 3200 3850 3300
+Wire Wire Line
+	3850 3400 4050 3400
+Wire Wire Line
+	4100 3400 4050 3400
+Connection ~ 4050 3400
+$Comp
+L Driver_Motor:L293D U2
+U 1 1 5F023E2B
+P 6900 3300
+F 0 "U2" H 7250 4450 50  0000 C CNN
+F 1 "L293D" H 7250 4300 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 7150 2550 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/l293.pdf" H 6600 4000 50  0001 C CNN
+	1    6900 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR06
+U 1 1 5F02AE08
+P 6200 3100
+F 0 "#PWR06" H 6200 2950 50  0001 C CNN
+F 1 "VCC" V 6215 3227 50  0000 L CNN
+F 2 "" H 6200 3100 50  0001 C CNN
+F 3 "" H 6200 3100 50  0001 C CNN
+	1    6200 3100
+	0    -1   -1   0   
+$EndComp
+Text GLabel 6200 2700 0    50   Input ~ 0
+MotorSignal1
+Text GLabel 6200 2900 0    50   Input ~ 0
+MotorSignal2
+Text GLabel 6200 3300 0    50   Input ~ 0
+MotorSignal3
+Text GLabel 6200 3500 0    50   Input ~ 0
+MotorSignal4
+$Comp
+L power:VCC #PWR07
+U 1 1 5F02E3B3
+P 6200 3700
+F 0 "#PWR07" H 6200 3550 50  0001 C CNN
+F 1 "VCC" V 6215 3827 50  0000 L CNN
+F 2 "" H 6200 3700 50  0001 C CNN
+F 3 "" H 6200 3700 50  0001 C CNN
+	1    6200 3700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 5F02E964
+P 6900 4250
+F 0 "#PWR09" H 6900 4000 50  0001 C CNN
+F 1 "GND" H 6905 4077 50  0000 C CNN
+F 2 "" H 6900 4250 50  0001 C CNN
+F 3 "" H 6900 4250 50  0001 C CNN
+	1    6900 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 4100 6700 4250
+Wire Wire Line
+	6800 4100 6800 4250
+Wire Wire Line
+	6700 4250 6800 4250
+Connection ~ 6800 4250
+Wire Wire Line
+	6800 4250 6900 4250
+Wire Wire Line
+	7000 4100 7000 4250
+Wire Wire Line
+	7000 4250 6900 4250
+Connection ~ 6900 4250
+Wire Wire Line
+	7100 4100 7100 4250
+Wire Wire Line
+	7100 4250 7000 4250
+Connection ~ 7000 4250
+Wire Wire Line
+	6200 3700 6400 3700
+Wire Wire Line
+	6400 3500 6200 3500
+Wire Wire Line
+	6200 3300 6400 3300
+Wire Wire Line
+	6200 2900 6400 2900
+Wire Wire Line
+	6200 3100 6400 3100
+Wire Wire Line
+	6400 2700 6200 2700
+$Comp
+L Motor:Motor_DC M1
+U 1 1 5F035E3F
+P 7950 2750
+F 0 "M1" H 8108 2746 50  0000 L CNN
+F 1 "Motor_DC" H 8108 2655 50  0000 L CNN
+F 2 "" H 7950 2660 50  0001 C CNN
+F 3 "~" H 7950 2660 50  0001 C CNN
+	1    7950 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 2700 7750 2700
+Wire Wire Line
+	7750 2700 7750 2550
+Wire Wire Line
+	7750 2550 7950 2550
+Wire Wire Line
+	7400 2900 7750 2900
+Wire Wire Line
+	7750 2900 7750 3050
+Wire Wire Line
+	7750 3050 7950 3050
+$Comp
+L Motor:Motor_DC M2
+U 1 1 5F03A913
+P 7950 3350
+F 0 "M2" H 8108 3346 50  0000 L CNN
+F 1 "Motor_DC" H 8108 3255 50  0000 L CNN
+F 2 "" H 7950 3260 50  0001 C CNN
+F 3 "~" H 7950 3260 50  0001 C CNN
+	1    7950 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 3300 7750 3300
+Wire Wire Line
+	7750 3300 7750 3150
+Wire Wire Line
+	7750 3150 7950 3150
+Wire Wire Line
+	7950 3650 7750 3650
+Wire Wire Line
+	7750 3650 7750 3500
+Wire Wire Line
+	7750 3500 7400 3500
+$Comp
+L power:VCC #PWR08
+U 1 1 5F046A71
+P 6800 2150
+F 0 "#PWR08" H 6800 2000 50  0001 C CNN
+F 1 "VCC" H 6815 2323 50  0000 C CNN
+F 2 "" H 6800 2150 50  0001 C CNN
+F 3 "" H 6800 2150 50  0001 C CNN
+	1    6800 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR010
+U 1 1 5F047730
+P 7000 2150
+F 0 "#PWR010" H 7000 2000 50  0001 C CNN
+F 1 "VCC" H 7015 2323 50  0000 C CNN
+F 2 "" H 7000 2150 50  0001 C CNN
+F 3 "" H 7000 2150 50  0001 C CNN
+	1    7000 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 2300 7000 2150
+Wire Wire Line
+	6800 2300 6800 2150
+Text Notes 7400 7500 0    62   ~ 0
+IR-Car-1
+Text Notes 8150 7650 0    50   ~ 0
+2020-07-03
+Text Notes 10600 7650 0    50   ~ 0
+1.0
+$EndSCHEMATC
